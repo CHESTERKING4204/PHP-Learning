@@ -16,7 +16,11 @@
 </body>
 </html>
 <?php 
+    echo $_Session['username'] . "<br>";
+    echo $_Session['password'] . "<br>";
     if(isset(($_POST['Logout']))){
+        session_destroy();
         header("Location: index.php");
     }
+
 ?>
